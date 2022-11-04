@@ -17,6 +17,9 @@ function getRndInteger(min, max) {
 /*------------------
     MAIN
 --------------------*/
+// seleziono il container della lista dei numeri
+const listContainer = document.getElementById('list');
+
 // creo costante del totale dei numeri da generare
 const totRandomNumbers = 5;
 // creo array vuoto in cui verranno inseriti i 5 numeri casuali non duplicati
@@ -28,6 +31,11 @@ while( numberList.length < totRandomNumbers ) {
     console.log(numberRandom);
     if( !numberList.includes(numberRandom) ) {
         numberList.push(numberRandom);
+        // creo l'elemento lista per ogni numero generato all'interno della verifica per non far stampare in HTML anche i numeri duplicati
+        const listItem = document.createElement('li');
+        // stampo in HTML i numeri generati
+        listItem.innerHTML = numberRandom;
+        listContainer.append(listItem);
     }
 }
 console.log(numberList);

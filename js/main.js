@@ -39,3 +39,8 @@ while( numberList.length < totRandomNumbers ) {
     }
 }
 console.log(numberList);
+
+// creo un timer che mi nasconda la lista di numeri generata dopo 30 secondi
+setTimeout(function() {
+    listContainer.classList.add('hide');
+}, 30000);

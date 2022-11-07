@@ -62,4 +62,10 @@ function askNumber() {
     }
     console.log("I numeri memorizzati dall'utente sono:", storedNumberList);
     console.log("I numeri indovinati dall'utente sono:", numbersGuessed);
+    // creo condizione per dire quanti e quali dei numeri da indovinare sono stati individuati.
+    if( numbersGuessed.length > 0 ) {
+        alert(`Complimenti! Hai indovinato ${numbersGuessed.length} numeri! I numeri da te indovinati sono: ${numbersGuessed}`);
+    } else {
+        alert('Purtroppo hai una pessima memoria, NON hai indovinato alcun numero!');
+    }
 }

@@ -44,3 +44,18 @@ console.log(numberList);
 setTimeout(function() {
     listContainer.classList.add('hide');
 }, 30000);
+
+// dopo 31 secondi chiedo all'utente, tramite un prompt all'interno di un ciclo FOR, di inserire i 5 numeri visualizzati precedentemente
+
+const storedNumberList = [];
+
+setTimeout(askNumber, 31000);
+
+function askNumber() {
+    for ( let i = 0; i < totRandomNumbers; i++ ) {
+        const numberStored = Number( prompt("Inserisci uno dei numeri memorizzati"));
+        storedNumberList.push(numberStored);
+        console.log(numberStored);
+    }
+    console.log(storedNumberList);
+}

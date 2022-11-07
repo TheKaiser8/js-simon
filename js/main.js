@@ -43,13 +43,13 @@ console.log(numberList);
 // creo un timer che mi nasconda la lista di numeri generata dopo 30 secondi
 setTimeout(function() {
     listContainer.classList.add('hide');
-}, 3000);
+}, 30000);
 
 // dopo 31 secondi chiedo all'utente, tramite un prompt all'interno di un ciclo FOR, di inserire i 5 numeri visualizzati precedentemente
 const storedNumberList = [];
 const numbersGuessed = [];
 
-setTimeout(askNumber, 3100);
+setTimeout(askNumber, 31000);
 
 function askNumber() {
     for ( let i = 0; i < totRandomNumbers; i++ ) {
